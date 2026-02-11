@@ -1,2 +1,3 @@
 # CICDPipeline
-A Architecture solution for setting up data in standardized way
+
+This project automatically validates data warehouse integrity on each commit using GitHub Actions and Dockerized MariaDB.
