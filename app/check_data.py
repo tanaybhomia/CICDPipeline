@@ -3,11 +3,11 @@ import sys
 
 try:
     conn = mysql.connector.connect(
-        host="host.docker.internal",
-        port=3307,
-        user="root",
-        password="root",
-        database="sales_dw"
+    host="superstore_db",
+    port=3306,
+    user="root",
+    password="root",
+    database="sales_dw"
     )
 
     cursor = conn.cursor()

@@ -11,6 +11,12 @@ services:
     volumes:
       - db_data:/var/lib/mysql
       - ./data:/data:Z
+    networks:
+      - cicd-network
+
+networks:
+  cicd-network:
+    external: true
 
 volumes:
   db_data: {}
