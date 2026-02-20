@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'python:3.11'
+        }
+    }
 
     stages {
         stage('Checkout') {
@@ -16,7 +20,7 @@ pipeline {
 
         stage('Run Test') {
             steps {
-                sh 'python3 app/check_data.py'
+                sh 'python app/check_data.py'
             }
         }
     }
